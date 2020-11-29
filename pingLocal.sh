@@ -9,7 +9,7 @@ if  [ $? -ne 0 ];
 then
 	/bin/echo $(date) error reboot in 60s 
 	/bin/sleep 60
-	/sbing/reboot
+	/sbin/reboot
 	#等待60秒后重启
 else
 	/bin/echo $(date) baidu.com connected
