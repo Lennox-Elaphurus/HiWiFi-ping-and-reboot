@@ -7,10 +7,11 @@
 
 if  [ $? -ne 0 ];
 then
-	/bin/echo $(date) error reboot in 60s 
-	/bin/sleep 60
-	/sbin/reboot
-	#等待60秒后重启
+	/bin/echo $(date) ERROR, rebooting eth2.2  
+	/sbin/ifconfig eth2.2 down
+	/bin/sleep 2
+	/sbin/ifconfig eth2.2 up
+	# 重启网线连接
 else
 	/bin/echo $(date) baidu.com connected
 fi
